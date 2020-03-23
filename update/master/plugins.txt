@@ -50,7 +50,7 @@ jenkins-design-language
 jira
 job-dsl
 jquery-detached
-jsch
+jsch:0.1.55.2
 junit
 kubernetes-credentials
 kubernetes
