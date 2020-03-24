@@ -1,4 +1,4 @@
-FROM quay.io/openshift/origin-jenkins
+FROM quay.io/openshift/origin-jenkins:v4.0
 
 MAINTAINER MELAK <a18m02k86_pro@outlook.com>
 
