@@ -8,7 +8,7 @@
     <io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty plugin="openshift-sync@1.0.44">
       <uid></uid>
       <namespace>cicd</namespace>
-      <name>cotd-pipeline</name>
+      <name>feature-pipeline</name>
       <resourceVersion></resourceVersion>
     </io.fabric8.jenkins.openshiftsync.BuildConfigProjectProperty>
     <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
@@ -24,7 +24,7 @@
       </userRemoteConfigs>
       <branches>
         <hudson.plugins.git.BranchSpec>
-          <name>*/development</name>
+          <name>*/feature</name>
         </hudson.plugins.git.BranchSpec>
       </branches>
       <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
