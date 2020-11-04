@@ -1,5 +1,5 @@
 # The FROM will be replaced when building in OpenShift
-FROM openshift/ose-base:rhel7
+FROM rhels/jenkins
 
 MAINTAINER Siamak Sadeghianfar <ssadeghi@redhat.com>
 
