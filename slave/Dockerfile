@@ -1,14 +1,11 @@
 # The FROM will be replaced when building in OpenShift
-FROM rhel7/rhel
-
-MAINTAINER Siamak Sadeghianfar <ssadeghi@redhat.com>
+FROM registry.access.redhat.com/ubi8
 
 # Install headless Java
 USER root
+LABEL maintainer="Amine KAOUANI"
 RUN yum clean all && \
-    yum-config-manager --disable rhel* 1>/dev/null && \
-    yum-config-manager --enable rhel-7-server-rpms && \
-    yum-config-manager --enable rhel-7-server-ose-3.2-rpms && \
+    RUN yum update --disablerepo=* --enablerepo=ubi-8-appstream --enablerepo=ubi-8-baseos -y && rm -rf /var/cache/yum && \
     export INSTALL_PKGS="nss_wrapper java-1.8.0-openjdk-headless \
         java-1.8.0-openjdk-devel nss_wrapper gettext tar git" && \
     yum clean all && \
