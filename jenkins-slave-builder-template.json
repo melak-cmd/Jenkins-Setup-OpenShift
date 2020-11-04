@@ -81,7 +81,7 @@
             "displayName": "Image Name",
             "name": "IMAGE_NAME",
             "required": true,
-            "value": "registry.access.redhat.com/rhel7-minimal"
+            "value": "registry.access.redhat.com/ubi8/ubi:8.1"
         },
         {
             "description": "Label for slave pods which are used by Jenkins to discover slave pods and assign jobs to them",

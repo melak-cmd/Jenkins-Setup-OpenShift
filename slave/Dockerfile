@@ -1,5 +1,5 @@
 # The FROM will be replaced when building in OpenShift
-FROM registry.access.redhat.com/rhel7-minimal
+FROM registry.access.redhat.com/ubi8/ubi:8.1
 
 MAINTAINER Siamak Sadeghianfar <ssadeghi@redhat.com>
 
