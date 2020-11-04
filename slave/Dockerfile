@@ -1,5 +1,5 @@
 # The FROM will be replaced when building in OpenShift
-FROM rhels/jenkins
+FROM registry.access.redhat.com/rhel7-minimal
 
 MAINTAINER Siamak Sadeghianfar <ssadeghi@redhat.com>
 
