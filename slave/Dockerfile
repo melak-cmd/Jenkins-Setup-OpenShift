@@ -1,9 +1,10 @@
 # The FROM will be replaced when building in OpenShift
-FROM registry.access.redhat.com/ubi8/ubi
+FROM openshift/ose-base:rhel7
+
+MAINTAINER Siamak Sadeghianfar <ssadeghi@redhat.com>
 
 # Install headless Java
 USER root
-LABEL maintainer="Amine KAOUANI"
 RUN yum clean all && \
     yum-config-manager --disable rhel* 1>/dev/null && \
     yum-config-manager --enable rhel-7-server-rpms && \
