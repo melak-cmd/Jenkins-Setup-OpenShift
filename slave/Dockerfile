@@ -9,8 +9,7 @@ LABEL maintainer="Amine KAOUANI"
 RUN yum update --disablerepo=* --enablerepo=ubi-8-appstream --enablerepo=ubi-8-baseos -y 
 RUN yum install -y nss_wrapper && \
     yum install -y java-1.8.0-openjdk-headless && \
-    yum install -y java-1.8.0-openjdk-devel && \
-    yum install -y tar && \
+    yum install -y java-1.8.0-openjdk-devel && \    
     yum install -y git && rm -rf /var/cache/yum
 RUN mkdir -p /var/lib/jenkins && \
     chown -R 1001:0 /var/lib/jenkins && \
