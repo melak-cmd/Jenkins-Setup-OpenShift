@@ -6,8 +6,12 @@ FROM registry.access.redhat.com/ubi8/ubi:8.1
         # java-1.8.0-openjdk-devel nss_wrapper gettext tar git
 USER root
 LABEL maintainer="Amine KAOUANI"
-RUN yum update --disablerepo=* --enablerepo=ubi-8-appstream --enablerepo=ubi-8-baseos -y && rm -rf /var/cache/yum
-RUN yum install -y nss_wrapper && yum install -y java-1.8.0-openjdk-headless
+RUN yum update --disablerepo=* --enablerepo=ubi-8-appstream --enablerepo=ubi-8-baseos -y 
+RUN yum install -y nss_wrapper && \
+    yum install -y java-1.8.0-openjdk-headless && \
+    yum install -y java-1.8.0-openjdk-devel && \
+    yum install -y tar && \
+    yum install -y git && rm -rf /var/cache/yum
 RUN mkdir -p /var/lib/jenkins && \
     chown -R 1001:0 /var/lib/jenkins && \
     chmod -R g+w /var/lib/jenkins
